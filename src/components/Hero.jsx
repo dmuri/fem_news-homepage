@@ -5,6 +5,7 @@ import articlesData from "../data/articlesData.json";
 const Hero = () => {
   return (
     <main className={styles.hero}>
+      <h1 className="sr-only">News Homepage</h1>
       <div className={styles.web3__image}>
         <img src="/images/image-web-3-desktop.jpg" alt="web3" />
       </div>
