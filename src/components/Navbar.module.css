@@ -1,0 +1,119 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  flex-shrink: 0;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-top: 9rem;
+  padding-left: 1.5rem;
+  position: fixed;
+  list-style: none;
+  background-color: var(--clr-off-white);
+  z-index: 1000;
+  inset: 0 0 0 100%;
+  transition: left 0.2s ease;
+  font-size: var(--fs-500);
+}
+
+.menu li:hover {
+  color: var(--clr-soft-red);
+}
+
+.menu a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.menubutton button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 2000;
+  width: 30px;
+  height: 20px;
+}
+
+.menu.visible {
+  left: 30%;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0 0 0 0;
+  z-index: -1000;
+  pointer: cursor;
+}
+
+.modal.visible {
+  opacity: 0.5;
+  z-index: 500;
+  display: block;
+  background-color: var(--clr-very-dark-blue);
+}
+
+/* Desktop Styles */
+@media (min-width: 375px) {
+  .menu {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    font-size: var(--fs-400);
+    gap: 2.5rem;
+    top: auto;
+    left: auto;
+    border: none;
+    padding: 0;
+    padding-left: 0.5rem;
+  }
+
+  .menubutton {
+    display: none;
+  }
+}
+
+.line1,
+.line2,
+.line3 {
+  background-color: #333;
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  transition: all 0.3s ease;
+}
+
+.line1 {
+  top: 0;
+}
+
+.line2 {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.line3 {
+  bottom: 0;
+}
+
+.active .line1 {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.active .line2 {
+  opacity: 0;
+}
+
+.active .line3 {
+  bottom: 50%;
+  transform: translateY(50%) rotate(-45deg);
+}
