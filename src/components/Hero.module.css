@@ -50,6 +50,15 @@
   line-height: 26px;
 }
 
+@media (min-width: 851px) and (max-width: 1068px) {
+  .web3__title {
+    line-height: 69px;
+  }
+  .web3__info__text {
+    line-height: 31px;
+  }
+}
+
 .web3__info__btn {
   background: var(--clr-soft-red);
   color: var(--clr-off-white);
