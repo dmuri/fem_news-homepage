@@ -2,6 +2,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
 }
 
 .logo {
@@ -62,7 +64,7 @@
 }
 
 /* Desktop Styles */
-@media (min-width: 375px) {
+@media (min-width: 565px) {
   .menu {
     display: flex;
     flex-direction: row;
